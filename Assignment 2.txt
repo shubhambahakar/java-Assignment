@@ -1,0 +1,115 @@
+
+
+
+
+
+
+
+
+
+
+ 
+
+package assignment2;
+import java.lang.Integer;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.time.*;
+import java.util.Calendar;
+import java.util.TimeZone;
+
+public  class Assignment2 {
+	public static  void convert(int x) {
+                 //Question1
+		System.out.println("Hexadecimal representation is:-" +
+	Integer.toHexString(x));
+		System.out.println("Octal representation is:- "
+	+Integer.toOctalString(x));
+		System.out.println("Binary representation is:- "
+				+Integer.toBinaryString(x));
+	}                
+	
+	public static void display() 
+	{
+                //Question2.
+		Runtime r = Runtime.getRuntime();
+		long fm = r.freeMemory();
+		long tm = r.totalMemory();
+		long maxM = r.maxMemory();
+		System.out.println("The free memory is:- "+fm);
+		System.out.println("The total memory is:- "+tm);
+		System.out.println("The maximum memory is:- "+maxM);
+	}
+	public static void dtDemo() {
+                //Question3
+		System.out.println("The today's date is:- "+LocalDate.now());
+		System.out.println("The current time is:- "+LocalTime.now());
+		System.out.println("The today's date and current time is:- "+LocalDateTime.now());
+	}
+	
+	public void newyorkTime() {
+                //Question5
+		Calendar calNewYork = Calendar.getInstance();
+		calNewYork.setTimeZone(TimeZone.getTimeZone("America/New_York"));
+		System.out.println();
+		System.out.println("Time in New York:- "+
+		calNewYork.get(Calendar.HOUR_OF_DAY)+ ":"
+		+calNewYork.get(Calendar.MINUTE)+":"+
+		calNewYork.get(Calendar.SECOND));
+		
+	}
+	public void changeFormat() {
+                //Question4
+		SimpleDateFormat sf = new SimpleDateFormat("dd/MM/yyyy");
+		Calendar c = Calendar.getInstance();
+		String cur_date = sf.format(c.getTime());
+		System.out.println("The formated current date is:- "+cur_date);
+	}
+	public void count(String str) {
+                //Question8
+		int len = str.length();
+		char[] ar = str.toCharArray();
+		for(int i=0;i<len;i++) {
+			int count = 0;
+			for(int j=0;j<len;j++) {
+				if(ar[i]==str.charAt(j)) {
+					count++;
+				}
+			}
+			if(count>0) {
+				System.out.println(ar[i]+"--->"+count);
+			}
+			else {
+				count = 0;
+			}
+		}
+	}
+	public void ageCal() {
+                //Question6
+		LocalDate dob = LocalDate.of(1999,8,5);
+		LocalDate curDate = LocalDate.now();
+		Period period = Period.between(dob, curDate);
+		System.out.printf("Your age is %d years %d month and %d days",period.getYears(),period.getMonths(),period.getDays());
+	}
+	public void iplDaysRemain() {
+                //Question7
+		LocalDate d = LocalDate.of(2023, 5, 28);
+		LocalDate curdate = LocalDate.now();
+		Period p = Period.between( curdate,d);
+		System.out.println("The number of days remain for IPL final:- "+p.getDays());
+	}
+	public static void main(String[] args)
+	{         
+		Assignment2.convert(65);//Question1
+		Assignment2.display();//Question2
+		Assignment2.dtDemo();//Question3
+
+
+		Assignment2 a = new Assignment2();
+		a.newyorkTime();//Question5
+		a.ageCal(); //Question6
+		a.iplDaysRemain();//Question7
+		a.count("Shubham");//Question8
+	}
+
+}

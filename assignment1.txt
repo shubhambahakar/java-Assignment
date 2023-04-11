@@ -1,0 +1,254 @@
+assignment 1 print hello world 
+public class Hello {
+
+	public static void main(String[] args)
+	{
+	     System.out.println("Hello world");
+	     
+	}
+
+}
+
+
+2) addition of two number 
+public class Add2no {
+
+	public static void main(String[] args)
+	{
+		int a=5;
+		int b=8;
+		int result = a+b;
+		System.out.println("result = "+result);
+		
+
+	}
+
+}
+
+3) calculate compound intrest
+import java.util.Scanner;
+
+//
+public class Ass3 {
+
+	public static void main(String[] args) 
+	{
+	double CI,Amount,Principal;
+	Scanner sc=new Scanner(System.in);
+		System.out.println(" enter amount");
+		Amount=sc.nextDouble();
+		System.out.println(" enter the principle");
+        double Principle = sc.nextDouble();
+        CI = Amount - Principle;
+		System.out.println(" CI=  "+CI);
+
+
+	}
+
+}
+
+4) calcute power of number 
+import java.util.Scanner;
+
+public class Ass4powerno {
+
+	public static void main(String[] args) 
+	{
+		int base;
+		int exponent;
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" enter base");
+		  base = sc.nextInt();
+		System.out.println(" enter the exponent");
+         exponent = sc.nextInt();
+         double power = Math.pow(base,exponent);                                                                                                                                                                                                                                                                                                                                    
+         System.out.println("result =  "+power);
+	}
+
+}
+5) swap two number 
+import java.util.Scanner;
+
+public class Ass5swap {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" enter num1");
+		int num1=sc.nextInt();
+		System.out.println(" enter the num2");
+        int num2 = sc.nextInt();
+      System.out.println("value after the swap");
+      int temp=0;
+      temp=num1;
+      num1=num2;
+      num2 = temp;
+      System.out.println("num1=  "+num1 + "num2=   "+num2);
+      
+	}
+
+}
+
+
+6) calculte area of rectangle
+import java.util.Scanner;
+
+public class Assarea_rect {
+
+	//private static int lenght;
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" enter length");
+		int length=sc.nextInt();
+		System.out.println(" enter the breath");
+        int breath = sc.nextInt();
+    
+		//int result = lenght * breath;
+        int area;
+        area = length * breath;
+        System.out.println("area = "+area);
+	}
+
+}
+
+7) cal area circle and circumference 
+
+package Circle;
+
+import java.util.Scanner;
+
+
+
+public class Areacircle {
+
+	public static void main(String[] args)
+	{
+		double r ,area;
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" enter the radius");
+		 r=sc.nextInt();
+        area = 3.14 * r * r;
+        System.out.println("area = "+area);
+         double circumference = 2 * Math.PI * r;
+         System.out.println("circumference = "+circumference);
+
+	}
+
+}
+        OR
+
+
+import java.util.Scanner;
+
+public class Circle {
+	public static void circum(){
+		System.out.println("Enter the radius");
+		Scanner sc=new Scanner(System.in);
+		int r=sc.nextInt();
+		double circumference= 2*Math.PI*r;
+		System.out.println("Circumference of cicle is "+circumference);
+	}
+	 public static void area(int r) {
+		 double area= Math.PI * r*r;
+		 System.out.println("area of circle is= "+area);
+	 }
+		
+	
+	public static void main(String[] args) 
+	{
+		Circle.circum();
+		Circle.area(5);
+	}
+
+}
+
+8) find ascii value of character 
+
+import java.util.Scanner;
+
+public class assi8_ascki {
+
+	public static void main(String[] args) 
+	{
+		System.out.println("enter the character ......");
+		Scanner sc=new Scanner(System.in);
+		char value=sc.next().charAt(0);
+		int ascii= (int) value;
+		System.out.println(" Ascii value is= "+ascii);
+	}
+
+}
+    
+9) print default value of primitive data type 
+
+public class ass9primitive {
+	static int value1;
+	static float value2;
+
+	static char value3;
+	static double value4;
+	static short value5;
+	public static void main(String[] args)
+	{
+		
+		System.out.println(" primitive value are......");
+		System.out.println("value1= "+value1);
+		System.out.println("value2= "+value2);
+		System.out.println("value3= "+value3);
+		System.out.println("value4= "+value4);
+		System.out.println("value5= "+value5);
+	}
+
+}
+
+
+10)  swap two variable without using third
+import java.util.Scanner;
+
+public class Ass10swap2 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" enter num1");
+		int num1=sc.nextInt();
+		System.out.println(" enter the num2");
+        int num2 = sc.nextInt();
+        
+        num1= num1 + num2;
+        num2= num1 - num2;
+        num1= num1 - num2;
+      System.out.println("value after the swap");
+      System.out.println("num1= "+ num1  + "num2= "+num2);
+	}
+
+}
+
+11) print fibonaci serie n number
+import java.util.Scanner;
+
+public class Fiboncii {
+
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" enter value n");
+		int n=sc.nextInt();
+		int a=0,b=1;
+		System.out.print(a+" "+b);
+		for(int i=2; i<=n; ++i){
+		
+			
+			int c= a + b;
+			System.out.print(" "+c+" ");
+			a = b;
+			b = c;
+			
+			
+		}
+	}
+
+}
+
+
